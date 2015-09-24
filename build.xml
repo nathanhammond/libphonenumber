@@ -2,17 +2,17 @@
 
 <project name="libphonenumber-javascript" default="compile">
   <property name="closure-compiler.dir"
-            value="${basedir}/vendor/closure-compiler" />
+      value="${basedir}/../../libphonenumber_area/closure-compiler" />
   <property name="closure-compiler.jar"
             value="${closure-compiler.dir}/build/compiler.jar" /> 
   <property name="closure-library.dir"
-            value="${basedir}/vendor/closure-library" />
+      value="${basedir}/../../libphonenumber_area/closure-library" />
   <property name="closure-linter.dir"
-            value="${basedir}/vendor/closure-linter" />
+            value="${basedir}/libphonenumber_area/closure-linter" />
   <property name="python-gflags.dir"
-            value="${basedir}/vendor/python-gflags" />
+      value="${basedir}/../../libphonenumber_area/python-gflags" />
   <property name="libphonenumber.dir"
-            value="${basedir}/vendor/libphonenumber" />
+      value="${basedir}/../../libphonenumber_area/libphonenumber" />
 
   <macrodef name="closure-compile">
     <attribute name="inputfile" />

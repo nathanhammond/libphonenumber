@@ -1,5 +1,4 @@
-// TODO: Add this back in as a feature:
-// goog.require('i18n.phonenumbers.AsYouTypeFormatter');
+goog.require('i18n.phonenumbers.AsYouTypeFormatter');
 goog.require('i18n.phonenumbers.PhoneNumberFormat');
 goog.require('i18n.phonenumbers.PhoneNumberType');
 goog.require('i18n.phonenumbers.PhoneNumberUtil');
@@ -113,6 +112,11 @@ function formatOutOfCountryCallingNumber(phoneNumber, regionCode, target) {
   return phoneUtil.formatOutOfCountryCallingNumber(number, target);
 }
 
+function asYouTypeFormatter(regionCode) {
+  return new i18n.phonenumbers.AsYouTypeFormatter(regionCode);
+}
+
+goog.exportSymbol('phoneUtils.asYouTypeFormatter', asYouTypeFormatter);
 goog.exportSymbol('phoneUtils.isPossibleNumber', isPossibleNumber);
 goog.exportSymbol('phoneUtils.isPossibleNumberWithReason', isPossibleNumberWithReason);
 goog.exportSymbol('phoneUtils.isValidNumber', isValidNumber);

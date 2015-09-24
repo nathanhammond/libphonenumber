@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="libphonenumber.js"></script>
+  </head>
+  <body>
+    <input type="text" id="inputter" placeholder="type here"></input>
+    <input type="text" id="outputter"></input>
+    <script>
+      var aytf = phoneUtils.asYouTypeFormatter('IT');
+      var inputter = document.getElementById('inputter');
+      var outputter = document.getElementById('outputter');
+      inputter.addEventListener('keydown', function(event) {
+        //debugger;
+        outputter.style.backgroundColor = "red";
+        //outputter.value += aytf.inputDigit()
+      });
+    </script>
+  </body>
+</html>
+
