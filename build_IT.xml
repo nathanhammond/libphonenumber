@@ -1,14 +1,16 @@
 <?xml version="1.0" ?>
 
 <project name="libphonenumber-javascript" default="compile">
+  <property name="google-libphonenumber-area"
+            value="/root/libphonenumber_area" />
   <property name="closure-compiler.dir"
-            value="${basedir}/vendor/closure-compiler" />
+            value="${google-libphonenumber-area}/closure-compiler" />
   <property name="closure-compiler.jar"
             value="${closure-compiler.dir}/build/compiler.jar" /> 
   <property name="closure-library.dir"
-            value="${basedir}/vendor/closure-library" />
+            value="${google-libphonenumber-area}/closure-library" />
   <property name="closure-linter.dir"
-            value="${basedir}/vendor/closure-linter" />
+            value="${google-libphonenumber-area}/closure-linter" />
   <property name="python-gflags.dir"
             value="${google-libphonenumber-area}/python-gflags" />
   <!--property name="libphonenumber.dir"
@@ -96,23 +98,24 @@
 
   <target name="clean" description="deletes all generated files">
     <delete file="dist/libphonenumber.js" />
+    <delete file="dist/libphonenumber_IT.js" />
   </target>
 
   <target name="compile-libphonenumber"
           description="generates libphonenumber.js">
     <closure-compile inputfile="libphonenumber.js"
-                     outputfile="dist/libphonenumber.js">
+                     outputfile="dist/libphonenumber_IT.js">
       <extraflags>
         <arg line='-p "${libphonenumber.dir}/javascript/i18n/phonenumbers"' />
-        <arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadata_IT.js"' />
-        <!--arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadatafortesting.js"' /-->
-        <!--arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadatalite.js"' /-->
+        <arg line='-e "localized_metadata/metadata_IT.js"' />
+        <!--arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadatafortesting.js"' />
+        <arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadatalite.js"' /-->
         <arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/regioncodefortesting.js"' />
       </extraflags>
     </closure-compile>
   </target>
 
-  <target name="compile-tests" depends="setnulldevice">
+  <!--target name="compile-tests" depends="setnulldevice">
     <closure-compile inputfile="${libphonenumber.dir}/javascript/i18n/phonenumbers/asyoutypeformatter_test.js"
                      outputfile="${null.device}">
       <extraflags>
@@ -129,7 +132,7 @@
         <arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadatalite.js"' />
       </extraflags>
     </closure-compile>
-  </target>
+  </target-->
 
   <!--target name="compile" depends="compile-libphonenumber,compile-tests" /-->
   <target name="compile" depends="compile-libphonenumber" />
