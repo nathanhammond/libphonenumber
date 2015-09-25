@@ -10,9 +10,11 @@
   <property name="closure-linter.dir"
             value="${basedir}/vendor/closure-linter" />
   <property name="python-gflags.dir"
-            value="${basedir}/vendor/python-gflags" />
+            value="${google-libphonenumber-area}/python-gflags" />
+  <!--property name="libphonenumber.dir"
+            value="${google-libphonenumber-area}/libphonenumber" /-->
   <property name="libphonenumber.dir"
-            value="${basedir}/vendor/libphonenumber" />
+            value="." />
 
   <macrodef name="closure-compile">
     <attribute name="inputfile" />
@@ -102,8 +104,9 @@
                      outputfile="dist/libphonenumber.js">
       <extraflags>
         <arg line='-p "${libphonenumber.dir}/javascript/i18n/phonenumbers"' />
-        <arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadatafortesting.js"' />
-        <arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadatalite.js"' />
+        <arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadata_IT.js"' />
+        <!--arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadatafortesting.js"' /-->
+        <!--arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadatalite.js"' /-->
         <arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/regioncodefortesting.js"' />
       </extraflags>
     </closure-compile>
@@ -128,7 +131,8 @@
     </closure-compile>
   </target>
 
-  <target name="compile" depends="compile-libphonenumber,compile-tests" />
+  <!--target name="compile" depends="compile-libphonenumber,compile-tests" /-->
+  <target name="compile" depends="compile-libphonenumber" />
 
   <target name="lint" description="lints all javascript files">
     <gjslint inputfile="${libphonenumber.dir}/javascript/i18n/phonenumbers/asyoutypeformatter*.js" />
