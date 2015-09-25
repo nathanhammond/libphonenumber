@@ -107,7 +107,7 @@
                      outputfile="dist/libphonenumber_IT.js">
       <extraflags>
         <arg line='-p "${libphonenumber.dir}/javascript/i18n/phonenumbers"' />
-        <arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadata_IT.js"' />
+        <arg line='-e "localized_metadata/metadata_IT.js"' />
         <!--arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadatafortesting.js"' />
         <arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/metadatalite.js"' /-->
         <arg line='-e "${libphonenumber.dir}/javascript/i18n/phonenumbers/regioncodefortesting.js"' />
