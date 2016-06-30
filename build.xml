@@ -16,11 +16,6 @@
   <property file="${basedir}/tmp/regioncodes.properties" />
 
   <taskdef resource="net/sf/antcontrib/antlib.xml"></taskdef>
-  <taskdef resource="net/sf/antcontrib/antcontrib.properties">
-    <classpath>
-      <pathelement location="/PATH/TO/ANT-CONTRIB.JAR"/>
-    </classpath>
-  </taskdef>
   <macrodef name="closure-compile">
     <attribute name="inputfile" />
     <attribute name="outputfile" />
