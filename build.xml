@@ -18,7 +18,7 @@
   <taskdef resource="net/sf/antcontrib/antlib.xml"></taskdef>
   <taskdef resource="net/sf/antcontrib/antcontrib.properties">
     <classpath>
-      <pathelement location="/usr/local/Cellar/ant-contrib/1.0b3/share/ant/ant-contrib-1.0b3.jar"/>
+      <pathelement location="/PATH/TO/ANT-CONTRIB.JAR"/>
     </classpath>
   </taskdef>
   <macrodef name="closure-compile">

@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-CWD=`pwd`
+`grep -e "/PATH/TO/ANT-CONTRIB.JAR" build.xml 2>&1 1>/dev/null`
+if [ $? -eq 0 ]; then
+  printf "You need to set the path to ant-contrib.jar in build.xml\nChange '/PATH/TO/ANT-CONTRIB.JAR' to match your system path to ant-contrib.jar\n"
+  exit 1
+fi
 
 if [ ! -d "vendor" ]; then
   mkdir vendor
