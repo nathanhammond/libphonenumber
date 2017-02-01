@@ -1,0 +1,19 @@
+{
+  "name": "libphonenumber",
+  "version": "1.0.0",
+  "description": "libphonenumber ==============",
+  "main": "libphonenumber.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Currency-One/libphonenumber.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Currency-One/libphonenumber/issues"
+  },
+  "homepage": "https://github.com/Currency-One/libphonenumber#readme"
+}
