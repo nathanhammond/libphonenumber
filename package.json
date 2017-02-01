@@ -1,0 +1,19 @@
+{
+  "name": "libphonenumber",
+  "version": "0.9.4",
+  "description": "libphonenumber",
+  "main": "libphonenumber.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanhammond/libphonenumber.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathanhammond/libphonenumber/issues"
+  },
+  "homepage": "https://github.com/nathanhammond/libphonenumber#readme"
+}
