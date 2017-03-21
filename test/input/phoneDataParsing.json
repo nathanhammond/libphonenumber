@@ -1,0 +1,54 @@
+{
+    "US": [
+        {
+            "phoneString": "",
+            "parseError": "PHONE_NOT_A_NUMBER"
+        },
+        {
+            "phoneString": "XYZ",
+            "parseError": "PHONE_NOT_A_NUMBER"
+        },
+        {
+            "phoneString": "2",
+            "parseError": "PHONE_NOT_A_NUMBER"
+        },
+        {
+            "phoneString": "510526343434343434434343",
+            "parseError": "PHONE_NUMBER_TOO_LONG"
+        },
+        {
+            "phoneString": "+61510",
+            "parseError": "PHONE_INVALID_COUNTRY_CODE"
+        },
+        {
+            "phoneString": "+997510",
+            "parseError": "PHONE_INVALID_COUNTRY_CODE"
+        },
+        {
+            "phoneString": "011",
+            "parseError": "PHONE_TOO_SHORT_AFTER_IDD"
+        }
+    ],
+    "AU": [
+        {
+            "phoneString": "2",
+            "parseError": "PHONE_NOT_A_NUMBER"
+        },
+        {
+            "phoneString": "212345678212345678",
+            "parseError": "PHONE_NUMBER_TOO_LONG"
+        },
+        {
+            "phoneString": "0011",
+            "parseError": "PHONE_TOO_SHORT_AFTER_IDD"
+        },
+        {
+            "phoneString": "+15105261234",
+            "parseError": "PHONE_INVALID_COUNTRY_CODE"
+        },
+        {
+            "phoneString": "+997510",
+            "parseError": "PHONE_INVALID_COUNTRY_CODE"
+        }
+    ]
+}
